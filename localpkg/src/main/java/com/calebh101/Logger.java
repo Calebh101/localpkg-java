@@ -2,7 +2,7 @@ package com.calebh101;
 
 import java.time.Instant;
 
-public class Utils {
+public class Logger {
     public static void print(String input) {
         System.out.println("\u001B[0m" + "LOG " + Instant.now().toString() + " > " + input + "\u001B[0m");
     }

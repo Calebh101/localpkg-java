@@ -7,7 +7,7 @@
 
     <groupId>com.calebh101</groupId>
     <artifactId>localpkg</artifactId>
-    <version>1.0.0C</version>
+    <version>1.0.0D</version>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>

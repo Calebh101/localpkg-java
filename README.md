@@ -2,7 +2,7 @@
 
 This is a repository containing cool functions for use with other Java programs.
 
-Current version: `1.0.0B`
+Current version: `1.0.0C`
 
 # Usage
 
@@ -22,7 +22,22 @@ Add these to `pom.xml` > `project`:
     <dependency>
         <groupId>com.calebh101</groupId>
         <artifactId>localpkg</artifactId>
-        <version><!-- Current version --></version>
+        <version>version</version> <!-- Replace [version] with the current version -->
     </dependency>
 </dependencies>
 ```
+
+# Build and Deploy
+
+- To build: `mvn package -Ppackage`
+- To deploy: `mvn deploy -Ppackage`
+
+# Changelog
+
+## 1.0.0A - 7/22/25
+
+- Initial release
+
+## 1.0.0B - 7/22/25
+
+## 1.0.0C - 7/22/25

@@ -5,8 +5,9 @@ import java.util.Arrays;
 import java.util.stream.Collectors;
 
 public class Logger {
-    private static boolean useVerbose = true;
+    private static boolean useVerbose = false;
     private static boolean useBold = false;
+    private static boolean useBoldForSuccess = true;
 
     public static String effect() {
         return effect(0);
@@ -31,12 +32,20 @@ public class Logger {
         _log("VBS", input, 2, false, null);
     }
 
+    public static void success(Object input) {
+        _log("PAS", input, 32, useBold && useBoldForSuccess, null);
+    }
+
     public static void warn(Object input) {
         _log("WRN", input, 33, useBold, null);
     }
 
     public static void error(Object input) {
         _log("ERR", input, 31, useBold, null);
+    }
+
+    public static void success(Object input, Object code) {
+        _log("PAS", input, 32, useBold && useBoldForSuccess, code);
     }
 
     public static void warn(Object input, Object code) {
@@ -49,5 +58,9 @@ public class Logger {
 
     public static void setVerbose(boolean input) {
         useVerbose = input;
+    }
+
+    public static void enableVerbose() {
+        useVerbose = true;
     }
 }
